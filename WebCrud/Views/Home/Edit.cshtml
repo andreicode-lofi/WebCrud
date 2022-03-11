@@ -1,0 +1,49 @@
+﻿@model WebCrud.Models.Formulario
+@{
+    ViewData["Title"] = "Editar cliente";
+}
+<h1 class="TituloFormulario">Editar cliente</h1>
+
+<hr />
+<div>
+    <div>
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly"></div>
+            <input type="hidden" asp-form="Id"/>
+                <div>
+                    <label asp-for="Nome" class="labelCreate">Nome: </label>
+                    <input asp-for="Nome" class="inputPadrao"/>
+                </div>
+                <div>
+                    <label asp-for="SobreNome" class="labelCreate">Sobre Nome: </label>
+                    <input asp-for="SobreNome" class="inputPadrao"/>
+                </div>
+                <div>
+                    <label asp-for="Telefone" class="labelCreate">Telefone: </label>
+                    <input asp-for="Telefone" class="inputPadrao"/>
+                </div>
+                <div>
+                    <label asp-for="Email" class="labelCreate">Email: </label>
+                    <input asp-for="Email" class="inputPadrao"/>
+                </div>
+                <div>
+                    <label asp-for="DataNascimento" class="labelCreate">Data Nascimento: </label>
+                    <input asp-for="DataNascimento" class="inputPadrao"/>
+                </div>
+                <div>
+                    <label asp-for="Cpf" class="labelCreate">Cpf: </label>
+                    <input asp-for="Cpf" class="inputPadrao"/>
+                </div>
+                <div>
+                    <label asp-for="Rg" class="labelCreate">Rg: </label>
+                    <input asp-for="Rg" class="inputPadrao"/>
+                </div>
+                <div>
+                    <input type="submit" value="Editar" class="btnCadastrar"/>
+                </div>
+
+        </form>
+    </div>
+</div>
+
+

@@ -1,0 +1,58 @@
+﻿@model WebCrud.Models.Formulario
+@{
+    ViewData["Title"] = "Detalhes do cliente";
+
+}
+
+<h1 class="TituloFormulario">Detalhes do cliente </h1>
+
+
+<div>
+    <form asp-action="Details">
+        <dl>
+            <dt class="labelCreate">
+                @Html.DisplayNameFor(model => model.Nome)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Nome)
+            </dd>
+            <dt class="labelCreate">
+                @Html.DisplayNameFor(model => model.SobreNome)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.SobreNome)
+            </dd>
+             <dt class="labelCreate">
+                @Html.DisplayNameFor(model => model.Telefone)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Telefone)
+            </dd>
+             <dt class="labelCreate">
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+             <dt class="labelCreate">
+                @Html.DisplayNameFor(model => model.DataNascimento)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.DataNascimento)
+            </dd>
+             <dt class="labelCreate">
+                @Html.DisplayNameFor(model => model.Cpf)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Cpf)
+            </dd>
+             <dt class="labelCreate">
+                @Html.DisplayNameFor(model => model.Rg)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Rg)
+            </dd>
+
+        </dl>
+    </form>
+</div>

@@ -1,0 +1,75 @@
+﻿@model WebCrud.Models.WebCrudViewModels
+@{
+    ViewData["Title"] = "Lista de clientes";
+}
+
+<div class="text-center">
+    <h1 class="TituloFormulario">Lista de clientes</h1>
+</div>
+
+<p>
+    <a asp-action="Create">Cadastra um novo cliente</a>
+</p>
+
+<table class="table">
+    <thead class="TituloTabela">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Formulario[0].Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Formulario[0].SobreNome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Formulario[0].Telefone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Formulario[0].Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Formulario[0].DataNascimento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Formulario[0].Cpf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Formulario[0].Rg)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.Formulario)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SobreNome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telefone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataNascimento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cpf)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Rg)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a>
+                    <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
+                    
+                </td>
+                
+            </tr>
+        }
+    </tbody>
+</table>

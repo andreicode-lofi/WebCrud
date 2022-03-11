@@ -1,0 +1,64 @@
+body {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 25px;
+}
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+/*Rodapé layout*/
+.RodaPe {
+    text-align: center;
+}
+/*formulario de cadastro*/
+.TituloFormulario {
+    color: #8A2BE2;
+    text-decoration: underline;
+    font-weight: bolder;
+}
+.FormularioCreate {
+    margin: 50px 0;
+}
+.inputPadrao{
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 5px 10px;
+    width: 35%;
+}
+.labelCreate {
+    display: block;
+    color: #8A2BE2;
+}
+/*botão do formulario para cadastra*/
+.btnCadastrar {
+    background-color: #8A2BE2;
+    color: #ffffff;
+    padding: 10px 100px;
+    margin: 10px;
+    font-weight: bolder;
+    border-radius: 10px;
+    transition: 1s all;
+    font-size: 15px;
+}
+.btnCadastrar:hover {
+    background-color: #7B68EE;
+    transform: scale(1.2);
+}
+/*Tabela de clientes*/
+.TituloTabela {
+    color: #8A2BE2;
+}

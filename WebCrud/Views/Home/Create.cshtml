@@ -1,0 +1,40 @@
+﻿@model WebCrud.Models.Formulario
+@{
+    ViewData["Title"] = "Cadastra Cliente";
+}
+<h1 class="TituloFormulario">Cadastro de clientes</h1>
+
+<form  asp-action="Create" class="FormularioCreate">
+    <div>
+        <label asp-for="Nome" class="labelCreate">Nome:</label>
+        <input asp-for="Nome" type="text" id="Nome" class="inputPadrao">
+    </div>
+    <div>
+        <label asp-for="SobreNome" class="labelCreate">Sobre Nome:</label>
+        <input asp-for="SobreNome" type="text" id="SobreNome" class="inputPadrao">
+    </div>
+    <div>
+        <label asp-for="Telefone" class="labelCreate">Telefone:</label>
+        <input asp-for="Telefone" type="text" id="Telefone" class="inputPadrao" placeholder="(xx) xxxxx-xxxx">
+    </div>
+    <div>
+        <label asp-for="Email" class="labelCreate">Email:</label>
+        <input asp-for="Email" type="text" id="Email" class="inputPadrao" placeholder="Seu@Email.com">
+    </div>
+    <div>
+        <label asp-for="DataNascimento" class="labelCreate">Data Nascimento:</label>
+        <input asp-for="DataNascimento" type="date" id="DataNascimento" class="inputPadrao">
+    </div>
+    <div>
+        <label asp-for="Cpf" class="labelCreate">Cpf:</label>
+        <input asp-for="Cpf" type="text" id="Cpf" class="inputPadrao" placeholder="xxx.xxx.xxx-xx">
+    </div>
+    <div>
+        <label asp-for="Rg" class="labelCreate">Rg:</label>
+        <input asp-for="Rg" type="text" id="Rg" class="inputPadrao" placeholder="xx.xxx.xxx-xx">
+    </div>
+        <input asp-controller="Home" asp-action="Create" type="submit" valeu="Cadastrar" class="btnCadastrar"/>
+</form>
+    <div>
+        <a asp-controller="Home" asp-action="Index" type="submit" valeu="Index">Lista de Clientes</a>
+    </div>
